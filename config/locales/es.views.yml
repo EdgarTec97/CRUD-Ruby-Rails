@@ -1,0 +1,15 @@
+es:
+  images:
+    new:
+      form:
+        error: "Error!!"
+        invalid_data: "Ha ocurrido un error al intentar crear tu %{model}"
+    edit:
+      form:
+        error: "Error!!"
+        invalid_data: "Ha ocurrido un error al intentar crear tu %{model}"
+    image:
+      edit_link: "Editar"
+      delete_link: "Eliminar"
+      open_link: "Abrir"
+    index:

@@ -1,0 +1,16 @@
+<div class="drop-down-div">
+    <%= form_for @image, builder: CustomFormBuilder do |f| %>
+    <%= f.form_error %>
+    
+    <%= f.label  :description %> <br>
+    <%= f.text_field :description, class: 'form-control' %>
+    <%= f.field_error :description%>
+
+    <br><br>
+    <%= f.label  :picture %> <br>
+    <%= f.file_field :picture, class: 'form-control' %> <br><br>
+
+    <%= f.submit "Enviar", class: 'btn btn-info'%>
+
+    <% end %>
+</div>

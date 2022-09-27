@@ -1,0 +1,17 @@
+
+<h1>Image viewer</h1>
+
+<div class="drop-down-div">
+    <h3>Description</h3>
+    <p><%=@image.description%></p>
+
+    <h3>Picture</h3>
+    <figure class="figure">
+        <%= image_tag @image.picture.thumb.url, class: 'figure-img img-fluid rounded' %>
+    </figure>
+
+    <h3>Likes</h3>
+    <p><%=@image.likes_counter%></p> <br>
+
+    <%= link_to 'Home', home_index_path, :class => 'btn btn-light' %>
+</div>

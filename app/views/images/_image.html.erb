@@ -1,0 +1,30 @@
+<div style="padding: 40px;">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">Likes</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @images.each do |image|%>
+                <tr style="background-color: white !important;">
+                    <td><%=image.description%></td>
+                    <td>
+                        <figure class="figure">
+                            <%= image_tag image.picture.medium.url, class: 'figure-img img-fluid rounded img-local' %>
+                        </figure>
+                    </td>
+                    <td><%=image.likes_counter%></td>
+                    <td>
+                        <%= link_to t('.edit_link'), edit_image_path(image), class: 'btn btn-success' %>
+                        <%= link_to t('.delete_link'), image, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+                        <%= link_to t('.open_link'), image, class:'btn btn-primary' %>
+                    </td>
+                </tr>
+            <%end%>
+        </tbody>
+    </table>
+</div>
